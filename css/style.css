@@ -22,11 +22,11 @@ button:hover {
 .container {
   width: 100vw;
   height: 100vh;
-  color: #fff;
   text-align: center;
 }
 
 .dark {
+  color: #fff;
   background-color: #333;
 }
 

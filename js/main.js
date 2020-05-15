@@ -1,12 +1,13 @@
 var app = new Vue({
-  el: "#app",
+  el: '#app',
   data: {
-    newItem: "",
-    todos: []
+    newItem: '',
+    todos: [],
+    isDark: false
   },
   methods: {
     addItem: function (event) {
-      if (this.newItem == "") return
+      if (this.newItem == '') return
 
       var todo = {
         item: this.newItem,
@@ -14,7 +15,7 @@ var app = new Vue({
       }
 
       this.todos.push(todo)
-      this.newItem = ""
+      this.newItem = ''
     },
     deleteItem: function (index) {
       this.todos.splice(index, 1)
