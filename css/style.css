@@ -35,6 +35,11 @@ button:hover {
   padding: 20px;
 }
 
-input {
+input[type='text'] {
   width: 200px;
+  margin: 20px;
+}
+
+li {
+  padding: 10px;
 }
