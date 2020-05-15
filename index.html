@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container dark">
-      <div id="app">
-        <div class="title">TODO List</div>
-        <div>
-          <form @submit.prevent>
-            <input type="text" v-model="newItem" />
-            <button @click="addItem()">Add</button>
-          </form>
-          <ul v-cloak>
-            <li v-for="(todo, index) in todos">
-              <input type="checkbox" v-model="todo.isDone" />
-              <span :class="{ done: todo.isDone }">{{ todo.item }}</span>
-              <button @click="deleteItem(index)">Delete</button>
-            </li>
-          </ul>
-        </div>
+    <div id="app" class="container" :class="{dark: isDark}">
+      <div class="title">TODO List</div>
+      <div>
+        ダークモード
+        <input type="checkbox" v-model="isDark" />
+      </div>
+      <div>
+        <form @submit.prevent>
+          <input type="text" v-model="newItem" />
+          <button @click="addItem()">Add</button>
+        </form>
+        <ul v-cloak>
+          <li v-for="(todo, index) in todos">
+            <input type="checkbox" v-model="todo.isDone" />
+            <span :class="{ done: todo.isDone }">{{ todo.item }}</span>
+            <button @click="deleteItem(index)">Delete</button>
+          </li>
+        </ul>
       </div>
     </div>
 
